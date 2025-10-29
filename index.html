@@ -7,22 +7,20 @@
     <meta name="description" content="Trân trọng kính mời bạn đến dự lễ thành hôn của Hùng & Ánh vào ngày 13/12/2025.">
 
     <script type="text/javascript">
-        !function(e, t, i) {
-            var a, n = e.innerWidth;
-            if (e[i] = (true || n < 768) ? "mobile" : "desktop",
-            "desktop" == e[i])
-                a = "width=" + 960 + ", user-scalable=no, initial-scale=1.0";
-            else {
-                var o = 1;
-                w = 420;
-                w != n && (o = n / w),
-                a = "width=" + w + ", user-scalable=no, initial-scale=" + o + ", minimum-scale=" + o + ", maximum-scale=" + o;
-            }
-            var l = t.createElement("meta");
-            l.name = "viewport";
-            l.setAttribute("content", a);
-            t.head.appendChild(l);
-        }(window, document, "DISPLAY");
+     (function() {
+         var meta = document.createElement('meta');
+         meta.name = "viewport";
+    
+         if (window.innerWidth < 768) {
+        // Mobile: để trình duyệt tự scale theo thiết bị
+              meta.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no";
+         } else {
+        // Desktop: cố định width 960px
+              meta.content = "width=960, user-scalable=no";
+         }
+    
+         document.getElementsByTagName('head')[0].appendChild(meta);
+     })();
     </script>
 
     <link rel="canonical" href="https://hungmaiwedding.netlify.app">
@@ -15021,3 +15019,4 @@
         <script async src="https://a.pancake.vn/js/fingerprint.js"></script>
     </body>
 </html>
+
